@@ -12,3 +12,51 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANAGER
+
+/*
+0 - 600PX;      Phone
+600 - 900px;    Tablet Potrait
+900 - 1200;     Tablet Landscape
+[1200 - 1800];  My normal styles apply here (Desktop first approach)
+1800 + ;        Big devices
+
+$breakpoint argument choices
+- phone
+- tablet-portrait
+- tablet-Landscape
+- big-desktop
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      //600px = 37.5em
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      //900px = 56.25em
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      //1200px = 75em
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      //1800px = 112.5em
+      @content;
+    }
+  }
+}
