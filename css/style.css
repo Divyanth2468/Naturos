@@ -266,7 +266,6 @@ body {
       left: 20%;
       top: 10rem; }
     .composition__photo:hover {
-      outline: 1.5rem solid #55c57a;
       transform: scale(1.05) translateY(-5px);
       box-shadow: 0px 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 1; }
