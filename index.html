@@ -499,14 +499,38 @@
       </div>
     </div>
     <script>
-      // let nav_button = document.querySelector(".navigation__button");
-      // let nav_background = document.querySelector(".navigation__background");
-      // let nav_nav = document.querySelector(".navigation__nav");
-      // nav_button.addEventListener("click", function (e) {
-      //   e.preventDefault();
-      //   nav_background.style.transform = "scale(100)";
-      //   nav_nav.classList.add("navigation__nav-animation");
-      // });
+      let nav_checkbox = document.querySelector(".navigation__checkbox");
+      let nav_icon = document.querySelector(".navigation__icon");
+      let nav_link = document.querySelectorAll(".navigation__link");
+      let nav_button = document.querySelector(".navigation__button");
+      let nav_background = document.querySelector(".navigation__background");
+      let nav_nav = document.querySelector(".navigation__nav");
+
+      console.log(nav_checkbox.checked);
+
+      // Display Nav Menu
+      function nav_display() {
+        nav_background.classList.toggle("navigation__background-animation");
+        nav_nav.classList.toggle("navigation__nav-animation");
+        nav_icon.classList.toggle("navigation__icon-animation");
+      }
+
+      // Hide Nav Menu
+      function nav_close() {
+        nav_background.classList.remove("navigation__background-animation");
+        nav_nav.classList.remove("navigation__nav-animation");
+        nav_icon.classList.remove("navigation__icon-animation");
+      }
+
+      nav_button.addEventListener("click", function (e) {
+        nav_display();
+      });
+
+      nav_link.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          nav_close();
+        });
+      });
     </script>
   </body>
 </html>
