@@ -166,6 +166,10 @@ body {
   .u-margin-top-phone {
     margin-top: 15rem !important; } }
 
+@media (max-width: 56.25em) {
+  .u-margin-top-phone {
+    margin-top: 10rem !important; } }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;

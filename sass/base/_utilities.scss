@@ -34,4 +34,8 @@
   @include respond(phone) {
     margin-top: 15rem !important;
   }
+
+  @include respond(tab-port) {
+    margin-top: 10rem !important;
+  }
 }
