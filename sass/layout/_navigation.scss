@@ -11,7 +11,7 @@
     position: fixed;
     top: 6rem;
     right: 6rem;
-    z-index: 3;
+    z-index: 5;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
     text-align: center;
     cursor: pointer;
@@ -38,7 +38,7 @@
       $color-primary-light,
       $color-primary-dark
     );
-    z-index: 1;
+    z-index: 3;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.007, 1);
 
     @include respond(tab-port) {
@@ -54,25 +54,30 @@
 
   &__background-animation {
     transform: scale(100);
+    z-index: 3;
   }
 
   &__nav {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: 2;
-
+    left: -20%;
+    // display: none;
+    z-index: 4;
     opacity: 0;
     width: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
+  // &__nav-display {
+  //   display: none;
+  // }
+
   &__list {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 70%;
+    transform: translate(-50%, -70%);
     list-style: none;
     text-align: center;
     width: 100%;
@@ -120,6 +125,7 @@
   &__nav-animation {
     opacity: 1;
     width: 100%;
+    display: unset;
   }
 
   //ICON
