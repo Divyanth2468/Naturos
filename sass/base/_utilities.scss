@@ -32,7 +32,7 @@
 
 .u-margin-top-phone {
   @include respond(phone) {
-    margin-top: 15rem !important;
+    margin-top: 10rem !important;
   }
 
   @include respond(tab-port) {
