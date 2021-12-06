@@ -929,8 +929,7 @@ body {
 
 .navigation__nav-animation {
   opacity: 1;
-  width: 100%;
-  display: unset; }
+  width: 100%; }
 
 .navigation__icon {
   position: relative;
