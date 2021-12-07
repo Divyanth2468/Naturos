@@ -32,10 +32,14 @@
 
 .u-margin-top-phone {
   @include respond(phone) {
-    margin-top: 10rem !important;
+    margin-top: 18vh !important;
   }
 
   @include respond(tab-port) {
-    margin-top: 10rem !important;
+    margin-top: 10vh !important;
+  }
+
+  @include respond(tab-land) {
+    margin-top: 10vh !important;
   }
 }

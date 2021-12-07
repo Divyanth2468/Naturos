@@ -164,11 +164,15 @@ body {
 
 @media (max-width: 37.5em) {
   .u-margin-top-phone {
-    margin-top: 10rem !important; } }
+    margin-top: 18vh !important; } }
 
 @media (max-width: 56.25em) {
   .u-margin-top-phone {
-    margin-top: 10rem !important; } }
+    margin-top: 10vh !important; } }
+
+@media (max-width: 75em) {
+  .u-margin-top-phone {
+    margin-top: 10vh !important; } }
 
 .section-about {
   background-color: #f7f7f7;
